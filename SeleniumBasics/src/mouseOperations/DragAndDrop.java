@@ -10,7 +10,7 @@ public class DragAndDrop {
 
 	WebDriver driver;
 
-	String url = "https://jqueryui.com/droppable/";
+	String url = "https://jqueryui.com/droppable";
 
 	public void initializedriver() {
 
