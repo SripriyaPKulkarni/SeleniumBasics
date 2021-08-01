@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BasicsOfSelenium {
 
-	WebDriver driver;
+	WebDriver d;
 
 	String url = "http://qatechhub.com";
 
@@ -13,16 +13,16 @@ public class BasicsOfSelenium {
 
 		System.setProperty("webdriver.chrome.driver", "C://Users/Sri Priya P Kulkarni/Softwares/chromedriver.exe");
 
-		driver = new ChromeDriver();
+		d = new ChromeDriver();
 
-		driver.manage().window().maximize();
+		d.manage().window().maximize();
 
-		driver.get(url);
+		d.get(url);
 	}
 
 	public void checktitle() {
 
-		String title = driver.getTitle();
+		String title = d.getTitle();
 		if (title.equals("QA Automation Tools Trainings and Tutorials | QA Tech Hub")) {
 			System.out.println("Pass");
 		} else {
@@ -33,17 +33,17 @@ public class BasicsOfSelenium {
 	public void closebrowser() {
 
 		// to close current focussed window
-		driver.close();
+		d.close();
 	}
 	public void facebookpage(){
-		driver.get("https://www.facebook.com");
+		d.get("https://www.facebook.com");
 		
-		driver.navigate().back();
+		d.navigate().back();
 	
 	}
 	public void navigate(){
-		System.out.println(driver.getCurrentUrl());
-		driver.navigate().forward();
+		System.out.println(d.getCurrentUrl());
+		d.navigate().forward();
 		
 	}
 	public static void main(String[] args) {
